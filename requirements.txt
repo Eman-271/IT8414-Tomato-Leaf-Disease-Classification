@@ -1,0 +1,9 @@
+# IT8414 Tomato Leaf Classification - environment (Google Colab, Python 3.13.16)
+# Versions from notebook Cell 1.0 and the saved model's metadata
+tensorflow==2.21.0
+keras==3.13.2
+numpy==2.4.6
+pandas==2.2.3
+scikit-learn==1.6.1
+matplotlib
+pillow

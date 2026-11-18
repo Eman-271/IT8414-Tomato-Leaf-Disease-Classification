@@ -1,0 +1,3 @@
+Model,Reported epoch,Train loss,Val. loss,Gap (val - train),Train acc.,Val. acc.,Lowest val. loss (epoch)
+Regularised (final model: augmentation + dropout + early stopping),24,0.0151,0.0176,0.0025,0.9917,1.0,0.0176 (24)
+"No regularisation (no augmentation, dropout 0, no early stopping)",70,0.0,0.1155,0.1155,1.0,0.9667,0.0998 (54)
