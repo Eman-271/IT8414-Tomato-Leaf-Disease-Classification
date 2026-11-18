@@ -1,0 +1,23 @@
+# Archives (keep the repository lightweight; tomato_original.zip / Kaggle download stay local)
+*.zip
+
+# Raw Kaggle download (rebuild data/selected with scripts/prepare_data.py)
+data/original/*
+!data/original/README.md
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# Temporary and OS files
+*.tmp
+*.temp
+*.log
+*.swp
+*~
+.DS_Store
+Thumbs.db
