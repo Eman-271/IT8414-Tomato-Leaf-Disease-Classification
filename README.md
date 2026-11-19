@@ -12,7 +12,7 @@ interpretability (Member 3, notebook sections 8.0 – 10.0) are in progress.
 | Member | Role | Notebook sections |
 |---|---|---|
 | Member 1 | Data pipeline & baseline CNN | 1.0 – 5.9 |
-| Member 2 | Improved model (MobileNetV2) & tuning | 6.0 – 7.7 |
+| Eman Khamdan (Member 2) | Improved model (MobileNetV2) & tuning | 6.0 – 7.7 |
 | Member 3 | Evaluation & interpretability | 8.0 – 10.0 (to come) |
 
 ---
