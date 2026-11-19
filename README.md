@@ -436,7 +436,7 @@ The project has **no server, REST API or database**. Its "interfaces" are files 
 <table>
 <tr>
 <td align="center" width="33%" valign="top">
-<h3>Fatema</h3>
+<h3>Fatema Alashiri</h3>
 <sub><b>Member 1 · Data pipeline & baseline CNN</b></sub><br><br>
 Data loading, EDA, balanced subset, split-ratio experiment, leakage checks, baseline CNN and its tuning, <code>DATA.md</code><br><br>
 <code>Notebook 1.0 – 5.9</code> · <code>Report 1, 3</code>
@@ -448,7 +448,7 @@ MobileNetV2 transfer learning, two-stage tuning, overfitting ablation, version c
 <code>Notebook 6.0 – 7.7</code> · <code>Report 2, 4, 5.1 – 5.2</code>
 </td>
 <td align="center" width="33%" valign="top">
-<h3>[Member 3 name]</h3>
+<h3>Abrar Alawadhi</h3>
 <sub><b>Member 3 · Evaluation & interpretability</b></sub><br><br>
 Test-set comparison of both models, error analysis, Grad-CAM, conclusion and slides<br><br>
 <code>Notebook 8.0 – 10.0</code> · <code>Report 5.3 – 5.5, 6, 7</code>
