@@ -1,9 +1,11 @@
-# Archives (keep the repository lightweight; tomato_original.zip / Kaggle download stay local)
+# Archives (keep the repository lightweight; only the dataset ZIP below is kept)
 *.zip
 
 # Raw Kaggle download (rebuild data/selected with scripts/prepare_data.py)
 data/original/*
 !data/original/README.md
+# The three original class folders as one ZIP, so Colab needs no upload (Apache 2.0, see README)
+!data/original/tomato_original.zip
 
 # Python / Jupyter
 __pycache__/

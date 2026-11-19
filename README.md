@@ -1,5 +1,7 @@
 # IT8414 — Tomato Leaf Disease Classification
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Eman-271/IT8414-Tomato-Leaf-Disease-Classification/blob/main/notebook/IT8414_Tomato_Leaf_Classification_with_Member2.ipynb)
+
 **Course:** IT8414 Deep Learning for Data Analytics · **Assessment 2 — Group Project** · **Group 01**
 
 Three-class image classification of tomato leaves (**Healthy**, **Early Blight**,
@@ -107,15 +109,15 @@ cd notebook && jupyter notebook IT8414_Tomato_Leaf_Classification_with_Member2.i
 For the standalone Member 2 notebook, set the project folder first:
 `export IT8414_PROJECT_DIR=$(pwd)/..` (Windows: `set IT8414_PROJECT_DIR=...`).
 
-### Google Colab
+### Google Colab (one click)
 
-1. Runtime → Change runtime type → **T4 GPU**.
-2. In the first cell:
-   ```python
-   !git clone https://github.com/Eman-271/IT8414-Tomato-Leaf-Disease-Classification.git /content/IT8414_Tomato_Project
-   ```
-   (cloning into `/content/IT8414_Tomato_Project` matches the notebooks' Colab default path).
-3. Open `notebook/IT8414_Tomato_Leaf_Classification_with_Member2.ipynb` and **Runtime → Run all**.
+1. Click the **Open in Colab** badge at the top of this page.
+2. Runtime → Change runtime type → **T4 GPU**, then **Runtime → Run all**.
+
+Nothing has to be uploaded. Cell 1.0 checks the official 80/10/10 split by the MD5 checksums of
+its manifests; if `/content/IT8414_Tomato_Project` does not hold exactly that split, it downloads
+this repository there (data, manifests, saved models). An old or wrong folder is moved aside,
+never used, and the notebook never makes a new split silently.
 
 ### What runs where
 
@@ -129,9 +131,8 @@ For the standalone Member 2 notebook, set the project folder first:
 **Reproducible numbers:** `M1_REUSE_SAVED = True` (Cell 5.2) loads the baseline runs from
 `results/baseline_runs.json`; set `M2_REUSE_SAVED = True` (Cell 6.2) to load Member 2's runs from
 `results/improved_runs.json` and the final model from `results/improved_mobilenetv2_final.keras`.
-Set either flag to `False` to retrain. The final baseline model file
-(`baseline_cnn_final.keras`) is not committed, so the notebook retrains it the first time
-(a few minutes on a T4).
+Set either flag to `False` to retrain. The final baseline model (`results/baseline_cnn_final.keras`)
+is committed, so the baseline numbers are reproduced exactly.
 
 ## 5. Results summary (validation set)
 
@@ -156,4 +157,5 @@ All model-selection decisions used the validation set only.
 
 The images come from the PlantVillage dataset, distributed under the
 **Apache License 2.0** (http://www.apache.org/licenses/LICENSE-2.0). The 300 images in
-`data/selected/` are unmodified copies, included under that licence.
+`data/selected/` and the three class folders in `data/original/tomato_original.zip` are
+unmodified copies, included under that licence with credit to Hughes & Salathé (2015).
