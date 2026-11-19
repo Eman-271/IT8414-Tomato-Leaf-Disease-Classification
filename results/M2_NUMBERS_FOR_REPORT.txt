@@ -1,0 +1,32 @@
+=== M2-A. REPORT TABLE 4.4 (improved model parameters) ===
+Total parameters: 2,261,827 | trainable in stage 1 (head): 3,843 | trainable when fine-tuning from block 14: 1,514,563 | from block 11: 1,898,755
+
+=== M2-B. REPORT TABLE 4.2 (training configuration of the final improved model) ===
+Stage 1: Adam lr 0.01, batch 16, dropout 0.2, early stopping (max 50, patience 5); best epoch 16 (stopped at 21)
+Stage 2: fine-tuned from block 14, Adam lr 1e-05, early stopping (max 20, patience 5); best epoch 8 (stopped at 13); trainable weights 1,514,563
+Hardware: CPU | Final model training time: 1.3 min | all 10 runs: 11.1 min
+
+=== M2-C. REPORT TABLE 5.2 (Exp | Stage | Parameter | Value | Best epoch (of run) | Train acc | Val acc | Val loss | Trainable params) ===
+I1 | 1 | Reference | lr 0.001 / bs 16 / dropout 0.2 | 48 (50) | 98.33% | 96.67% | 0.1054 | 3,843
+I2 | 1 | Learning rate | 0.0001 | 50 (50) | 89.58% | 86.67% | 0.3900 | 3,843
+I3 | 1 | Learning rate | 0.01 | 16 (21) | 94.17% | 96.67% | 0.0839 | 3,843
+I4 | 1 | Batch size | 8 | 29 (34) | 96.67% | 93.33% | 0.1151 | 3,843
+I5 | 1 | Batch size | 32 | 32 (37) | 96.25% | 90.00% | 0.2025 | 3,843
+I6 | 1 | Dropout rate | 0.0 | 39 (44) | 98.33% | 100.00% | 0.0922 | 3,843
+I7 | 1 | Dropout rate | 0.5 | 24 (29) | 91.67% | 90.00% | 0.1782 | 3,843
+I8 | 2 | Fine-tune depth | from block 14, lr 1e-5 | 8 (13) | 99.17% | 100.00% | 0.0176 | 1,514,563
+I9 | 2 | Fine-tune depth | from block 11, lr 1e-5 | 8 (13) | 98.33% | 100.00% | 0.0281 | 1,898,755
+I10 | 2 | Fine-tune learning rate | from block 14, lr 1e-4 | 6 (11) | 100.00% | 100.00% | 0.0218 | 1,514,563
+
+=== M2-D. TEXT for report 5.2 (selection) ===
+Stage 1 selected Exp. I3 (Learning rate = 0.01) with validation loss 0.0839 (reference I1: 0.1054). The final improved model is Exp. I8 (Fine-tune depth = from block 14, lr 1e-5): validation loss 0.0176, validation accuracy 100.00% at best epoch 8. Baseline (final): validation loss 0.3779, validation accuracy 90.00%. Decisions used the validation set only.
+
+=== M2-E. TEXT for report 5.1 (Figure 5.2, learning curves) ===
+Stage 1 started at validation loss 0.5271 and validation accuracy 83.33% after one epoch. At the restored best epoch (24 overall) training loss was 0.0151 and validation loss 0.0176; training accuracy 99.17%, validation accuracy 100.00%.
+
+=== M2-F. REPORT TABLE 5.3 (overfitting-control ablation) ===
+Regularised (final model: augmentation + dropout + early stopping) | epoch 24 | train loss 0.0151 | val loss 0.0176 | gap 0.0025 | train acc 99.17% | val acc 100.00% | lowest val loss 0.0176 (24)
+No regularisation (no augmentation, dropout 0, no early stopping) | epoch 70 | train loss 0.0000 | val loss 0.1155 | gap 0.1155 | train acc 100.00% | val acc 96.67% | lowest val loss 0.0998 (54)
+
+=== M2-G. VALIDATION comparison (test-set comparison = Member 3, Cell 8.0) ===
+Baseline CNN: val acc 90.00%, val loss 0.3779, 101,699 params | Improved MobileNetV2: val acc 100.00%, val loss 0.0176, 2,261,827 params

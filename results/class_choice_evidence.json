@@ -1,0 +1,31 @@
+{
+  "images_per_class": 150,
+  "mean_lesion_fraction": {
+    "Healthy": 0.0075,
+    "Early Blight": 0.1465,
+    "Late Blight": 0.1869
+  },
+  "colour_distance": {
+    "Healthy - Early Blight": 0.447,
+    "Healthy - Late Blight": 0.294,
+    "Early Blight - Late Blight": 0.261
+  },
+  "colour_only_confusion_matrix": [
+    [
+      140,
+      1,
+      9
+    ],
+    [
+      21,
+      79,
+      50
+    ],
+    [
+      62,
+      16,
+      72
+    ]
+  ],
+  "colour_only_accuracy": 0.6467
+}

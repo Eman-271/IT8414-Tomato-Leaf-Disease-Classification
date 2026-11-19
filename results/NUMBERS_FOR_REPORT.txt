@@ -1,0 +1,39 @@
+=== Q. TEXT for report 3.2 (Figure 3.3, class-choice evidence) ===
+On 150 random images per class, the brown/yellow (lesion-coloured) share of the leaf was 0.8% for Healthy, 14.7% for Early Blight and 18.7% for Late Blight. Colour-profile distances: Healthy - Early Blight 0.447; Healthy - Late Blight 0.294; Early Blight - Late Blight 0.261 (most similar pair: Early Blight - Late Blight). A colour-only classifier reached 64.7% (correct per class: Healthy 140/150, Early Blight 79/150, Late Blight 72/150; Early Blight predicted as Late Blight 50x, Late Blight predicted as Healthy 62x).
+
+=== S. TEXT for notebook 5.3 'Interpretation' and report 3.4 (Figure 3.6) ===
+Mean validation loss ± SD over three random splits per ratio - 70/15/15: 0.4581 ± 0.0044 (accuracy 79.26% ± 1.28%; 210 training / 45 validation images); 80/10/10: 0.4097 ± 0.0353 (accuracy 80.00% ± 0.00%; 240 training / 30 validation images); 60/20/20: 0.4588 ± 0.0281 (accuracy 81.11% ± 3.47%; 180 training / 60 validation images). The chosen ratio is 80/10/10, because it had the lowest mean validation loss. The final split has 240 / 30 / 30 images. The decision used validation data only. The candidate splits were drawn independently of the final split, so their validation parts contained up to 15 of the 30 final test images; no model was trained, tuned or selected on the final test set.
+Check without the final test images (270 images) - mean validation loss ± SD: 70/15/15: 0.4402 ± 0.1305; 80/10/10: 0.3591 ± 0.0442; 60/20/20: 0.4312 ± 0.1445. Ratio chosen by the same rule: 80/10/10 (the same ratio, so the overlap did not influence the choice).
+
+=== A. REPORT TABLE 4.2 (training configuration) ===
+Learning rate selected: 0.001 | Batch size selected: 8 | Kernel: 3x3
+Best epoch: 19 (training stopped at epoch 24)
+Hardware: T4 GPU | Final training time: 0.3 min
+
+=== B. REPORT TABLE 5.1 (Exp | Best epoch (of run) | Train acc | Val acc | Val loss | Observation) ===
+1 | 22 (27) | 82.92% | 73.33% | 0.4395 | Reference
+2 | 19 (24) | 85.00% | 90.00% | 0.3779 | Lowest validation loss - selected
+3 | 19 (24) | 84.58% | 76.67% | 0.4438 | Higher validation loss than the reference (0.4438 vs 0.4395)
+4 | 37 (42) | 78.75% | 76.67% | 0.5547 | Higher validation loss than the reference (0.5547 vs 0.4395)
+5 | 10 (15) | 56.25% | 63.33% | 0.8328 | Higher validation loss than the reference (0.8328 vs 0.4395)
+6 | 14 (19) | 68.33% | 66.67% | 0.6177 | Higher validation loss than the reference (0.6177 vs 0.4395)
+
+=== C. REPORT TABLE 5.4 (baseline row; Accuracy | Precision | Recall | F1 | AUC | Params | Train time) ===
+80.00% (66.67%-93.33%) | 83.22% | 80.00% | 79.38% (62.49%-91.68%) | 0.8950 | 101,699 | 0.3 min
+
+=== D. REPORT TABLE 5.5 (Class | Precision | Recall | F1 | Correct / test images of the class) ===
+Healthy | 76.92% | 100.00% | 86.96% | 10/10
+Early Blight | 72.73% | 80.00% | 76.19% | 8/10
+Late Blight | 100.00% | 60.00% | 75.00% | 6/10
+
+=== E. TEXT for notebook 5.6 'Selected configuration' and report 5.2 ===
+Validation loss at the best epoch - batch size 8: 0.3779 (epoch 19); 16: 0.4395 (epoch 22); 32: 0.4438 (epoch 19). Learning rate 0.0001: 0.5547 (epoch 37); 0.001: 0.4395 (epoch 22); 0.003: 0.8328 (epoch 10). Kernel 3x3: 0.4395 vs 5x5: 0.6177 (267,075 instead of 101,699 parameters). The selected configuration is Experiment 2 (Batch size = 8), with the lowest validation loss (0.3779) at epoch 19 and validation accuracy 90.00%. Early stopping gave every setting a fair training length. The decision used the validation set only; the test set had no influence.
+
+=== F. TEXT for report 5.1 (Figure 5.1) ===
+Training started with validation loss 1.0995 - close to ln 3 = 1.0986, the loss of random guessing between three classes. The best validation loss (0.3779) was reached at epoch 19; training stopped at epoch 24 after 5 epochs without improvement, and the best weights were restored. At the best epoch, training accuracy was 85.00% and validation accuracy 90.00% (training loss 0.4285, validation loss 0.3779), so there is no clear overfitting.
+
+=== G. TEXT for notebook 5.8 'Interpretation' and report 5.3 ===
+The final baseline reached a test accuracy of 80.00% (95% CI 66.67%-93.33%), compared with 90.00% on validation; macro F1 was 79.38% and macro ROC-AUC 0.8950. Healthy (10/10) and Early Blight (8/10) are recognised best. The weakest class is Late Blight (recall 60.00%, 6/10): 3 as Early Blight and 1 as Healthy. Predicting Healthy for a Late Blight leaf (1 leaf) is the costliest error for a screening tool, because the farmer would not treat the plant. A likely cause is that both blights produce similar brown, necrotic lesions, and that Late Blight often shows small, pale lesions near the leaf edge that are easy to miss on a mostly green leaf. With 30 test images, one image = 3.3 percentage points, so small differences between models may be noise.
+
+=== H. TEXT for notebook 5.9 summary ===
+Selected configuration: batch 8, learning rate 0.001, 3x3 kernels, early stopping (best epoch 19). Validation accuracy 90.00%, test accuracy 80.00%, macro F1 79.38%, ROC-AUC 0.8950, Late Blight recall 60.00%.
