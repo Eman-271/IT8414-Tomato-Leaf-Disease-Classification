@@ -1,6 +1,6 @@
 # IT8414 — Tomato Leaf Disease Classification
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eman-271/it8414-tomato-leaf-disease-classification/blob/main/notebook/IT8414_Tomato_Leaf_Classification_with_Member2.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Eman-271/IT8414-Tomato-Leaf-Disease-Classification/blob/main/notebook/IT8414_Tomato_Leaf_Classification_with_Member2.ipynb)
 
 **Course:** IT8414 Deep Learning for Data Analytics · **Assessment 2 — Group Project** · **Group 01**
 
