@@ -9,5 +9,6 @@ Tomato___Late_blight/    (1,527 images)
 ```
 
 Source: https://www.kaggle.com/datasets/charuchaudhry/plantvillage-tomato-leaf-dataset (folder `plantvillage/`).
-Or upload `tomato_original.zip` to Colab: notebook Cell 1.0 unzips it here.
-Licence: Apache License 2.0 (PlantVillage). The images are not included in the submission; see `documentation/DATA.md`.
+`tomato_original.zip` in this folder holds exactly these three folders; notebook Cell 1.0 unzips it here,
+so Colab needs no upload or Kaggle account.
+Licence: Apache License 2.0 (PlantVillage, Hughes & Salathé, 2015); the images are unmodified copies.
