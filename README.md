@@ -22,6 +22,8 @@ interpretability (Member 3, notebook sections 8.0 – 10.0) are in progress.
 ```
 IT8414-Tomato-Leaf-Disease-Classification/
 ├── README.md
+├── documentation/
+│   └── DATA.md                   # dataset source, licence, structure, preparation (Deliverable 3)
 ├── requirements.txt
 ├── .gitignore
 ├── data/
