@@ -91,7 +91,7 @@ flowchart TD
     end
 
     subgraph M3["Member 3 · 8.0 – 10.0"]
-        O["Test-set comparison · error analysis · Grad-CAM"]:::todo
+        O["Test-set comparison · error analysis · Grad-CAM"]:::model
     end
 
     R[("results/<br/>.keras models · runs JSON · CSV tables · figures")]:::out
@@ -101,9 +101,9 @@ flowchart TD
     M --> J --> K --> L --> N
     I --> R
     N --> R
-    I -.-> O
-    N -.-> O
-    O -.-> R
+    I --> O
+    N --> O
+    O --> R
 ```
 
 <details>
@@ -257,10 +257,7 @@ IT8414-Tomato-Leaf-Disease-Classification/
 ├── .gitignore                       # ignores *.zip except data/original/tomato_original.zip
 │
 ├── notebook/
-│   ├── IT8414_Tomato_Leaf_Classification_Final.ipynb         # FINAL: 1.0 – 10.0, all members (submit this)
-│   ├── IT8414_Tomato_Leaf_Classification_with_Member2.ipynb  # earlier master: 1.0 – 7.7
-│   ├── IT8414_Tomato_Leaf_Classification.ipynb               # Member 1 only: 1.0 – 5.9
-│   └── IT8414_Member2_Sections_6_7.ipynb                     # Member 2 only: 6.0 – 7.7 (standalone)
+│   └── IT8414_Tomato_Leaf_Classification_Final.ipynb         # the project notebook: sections 1.0 – 10.0
 │
 ├── scripts/
 │   └── prepare_data.py              # rebuilds data/selected + manifests (no TensorFlow)
@@ -336,8 +333,8 @@ These switches are set inside the notebook:
 | Flag | Cell | Default | Effect |
 |---|---|---|---|
 | `M1_REUSE_SAVED` | 5.2 | `True` | Replays a baseline run from `results/baseline_runs.json` only if its settings and images match exactly. A changed setting is trained live. `False` retrains everything. |
-| `M2_REUSE_SAVED` | 6.2 | `False` | `True` loads the MobileNetV2 runs and the final model from `results/`. It does not check settings, so keep it `False` when you change a hyperparameter. |
-| `DOWNLOAD_MEMBER1_RESULTS` | 5.9 | `False` | `True` downloads Member 1's results as a ZIP (Colab only) |
+| `M2_REUSE_SAVED` | 6.2 | `True` | Re-loads a MobileNetV2 run from `results/improved_runs.json` only if its settings are unchanged; a changed setting is trained again. `False` retrains everything. |
+| `DOWNLOAD_MEMBER1_RESULTS` | 5.9 | `False` | `True` downloads the baseline results as a ZIP (Colab only) |
 
 Pinned versions (`requirements.txt`): `tensorflow==2.21.0`, `keras==3.15.1`, `numpy==2.4.6`, `pandas==2.2.3`, `scikit-learn==1.6.1`, plus `matplotlib` and `pillow`.
 
