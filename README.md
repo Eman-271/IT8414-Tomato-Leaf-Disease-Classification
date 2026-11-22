@@ -294,7 +294,7 @@ IT8414-Tomato-Leaf-Disease-Classification/
 │   ├── NUMBERS_FOR_REPORT.txt               # every baseline number in the report
 │   ├── M2_NUMBERS_FOR_REPORT.txt            # every MobileNetV2 number in the report
 │   ├── README.md                            # which cell writes which file
-│   └── figures/                             # figures 3.1 – 3.6, 4.1, 5.1 – 5.4, D.1, D.2
+│   └── figures/                             # figures 3.1 – 3.6, 4.1, 5.1 – 5.6, 6.1, D.1, D.2
 │
 └── documentation/
     └── DATA.md                      # dataset source, licence, structure, preparation
@@ -422,13 +422,11 @@ The project has **no server, REST API or database**. Its "interfaces" are files 
 <td align="center"><img src="results/figures/fig3_6_split_ratio_comparison.png" alt="Split-ratio comparison" width="100%"><br><sub><b>Figure 3.6</b> · Split-ratio experiment</sub></td>
 </tr>
 <tr>
-<td align="center" colspan="2">
-<br>
-<!-- Drop a demo GIF or screenshot here, for example:
-<img src="documentation/screenshots/colab_run_all.gif" alt="Run all in Colab" width="90%"> -->
-<sub>🎬 <b>Placeholder:</b> Colab "Run all" demo GIF and Member 3's Grad-CAM figures (section 9.0)</sub>
-<br><br>
-</td>
+<td align="center"><img src="results/figures/fig5_5_test_confusion_matrices.png" alt="Test-set confusion matrices" width="100%"><br><sub><b>Figure 5.5</b> · Test-set confusion matrices (both models)</sub></td>
+<td align="center"><img src="results/figures/fig5_6_misclassified_test_leaves.png" alt="Misclassified test leaves" width="100%"><br><sub><b>Figure 5.6</b> · Misclassified test leaves</sub></td>
+</tr>
+<tr>
+<td align="center" colspan="2"><img src="results/figures/fig6_1_gradcam_test_leaves.png" alt="Grad-CAM for both models" width="60%"><br><sub><b>Figure 6.1</b> · Grad-CAM: where each model looks (section 9.0)</sub></td>
 </tr>
 </table>
 
