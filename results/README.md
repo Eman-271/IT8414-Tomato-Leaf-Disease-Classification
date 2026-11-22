@@ -1,6 +1,6 @@
 # results
 
-Written by the notebook (final run, 11 November 2026):
+Written by the project notebook (`notebook/IT8414_Tomato_Leaf_Classification_Final.ipynb`):
 
 | File | Cell |
 |---|---|
@@ -21,5 +21,14 @@ Written by the notebook (final run, 11 November 2026):
 | `figures/fig5_1_final_baseline_curves.png` | 5.7 (report Figure 5.1) |
 | `figures/figD_1_baseline_experiment_val_loss.png` | 5.6 (report Figure D.1) |
 | `figures/fig5_4_baseline_confusion_matrix.png` | 5.8 (report Figure 5.4) |
-
-Members 2 and 3 add their models and figures here.
+| `improved_layer_table.csv` | 6.1 |
+| `improved_runs.json` | 7.1 – 7.4 (settings, summary and epoch history of each run; used by `M2_REUSE_SAVED`) |
+| `improved_hyperparameter_results.csv` | 7.3 (report Table 5.2) |
+| `improved_stage1_selected.weights.h5` | 7.3 (selected stage-1 weights, Exp. I3) |
+| `improved_overfitting_ablation.csv` | 7.4 (report Table 5.3) |
+| `improved_mobilenetv2_final.keras` | 7.5 |
+| `improved_validation_results.json`, `M2_NUMBERS_FOR_REPORT.txt` | 7.7 |
+| `figures/fig4_1_overall_workflow.png` | 6.0 (report Figure 4.1) |
+| `figures/figD_2_improved_experiment_val_loss.png` | 7.3 (report Figure D.2) |
+| `figures/fig5_3_overfitting_control.png` | 7.4 (report Figure 5.3) |
+| `figures/fig5_2_improved_learning_curves.png` | 7.5 (report Figure 5.2) |
