@@ -102,7 +102,7 @@ blights, so the task is genuinely fine-grained.
 ```
 IT8414_Tomato_Project/
 ├── data/
-│   ├── original/                 # untouched Kaggle class folders (not submitted)
+│   ├── original/                 # untouched Kaggle class folders (tomato_original.zip)
 │   │   ├── Tomato___healthy/
 │   │   ├── Tomato___Early_blight/
 │   │   └── Tomato___Late_blight/
@@ -116,7 +116,7 @@ IT8414_Tomato_Project/
 │       ├── test_split.csv
 │       └── data_summary.json     # written by scripts/prepare_data.py
 ├── documentation/DATA.md         # this file
-├── notebook/IT8414_Tomato_Leaf_Classification.ipynb
+├── notebook/IT8414_Tomato_Leaf_Classification_Final.ipynb
 ├── scripts/prepare_data.py       # rebuilds data/selected and the manifests
 └── results/                      # saved models, figures and tables
 ```
