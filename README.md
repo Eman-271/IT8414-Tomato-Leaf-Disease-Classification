@@ -8,10 +8,10 @@
 
 <br>
 
-<a href="https://colab.research.google.com/github/Eman-271/IT8414-Tomato-Leaf-Disease-Classification/blob/main/notebook/IT8414_Tomato_Leaf_Classification_with_Member2.ipynb"><img src="https://img.shields.io/badge/Open%20in%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white" alt="Open in Colab"></a>
+<a href="https://colab.research.google.com/github/Eman-271/IT8414-Tomato-Leaf-Disease-Classification/blob/main/notebook/IT8414_Tomato_Leaf_Classification_Final.ipynb"><img src="https://img.shields.io/badge/Open%20in%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white" alt="Open in Colab"></a>
 <img src="https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.13">
 <img src="https://img.shields.io/badge/TensorFlow-2.21.0-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow 2.21.0">
-<img src="https://img.shields.io/badge/Keras-3.13.2-D00000?style=for-the-badge&logo=keras&logoColor=white" alt="Keras 3.13.2">
+<img src="https://img.shields.io/badge/Keras-3.15.1-D00000?style=for-the-badge&logo=keras&logoColor=white" alt="Keras 3.15.1">
 <br>
 <img src="https://img.shields.io/badge/NumPy-2.4.6-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy 2.4.6">
 <img src="https://img.shields.io/badge/pandas-2.2.3-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas 2.2.3">
@@ -195,7 +195,7 @@ Cell 5.8 predicts the class of a new leaf photo. Everything also runs **offline*
 
 ### Option A · Google Colab (one click)
 
-1. Click <a href="https://colab.research.google.com/github/Eman-271/IT8414-Tomato-Leaf-Disease-Classification/blob/main/notebook/IT8414_Tomato_Leaf_Classification_with_Member2.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" align="center"></a>
+1. Click <a href="https://colab.research.google.com/github/Eman-271/IT8414-Tomato-Leaf-Disease-Classification/blob/main/notebook/IT8414_Tomato_Leaf_Classification_Final.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" align="center"></a>
 2. Choose <kbd>Runtime</kbd> → <kbd>Change runtime type</kbd> → <kbd>T4 GPU</kbd>.
 3. Choose <kbd>Runtime</kbd> → <kbd>Run all</kbd>, or press <kbd>Ctrl</kbd> + <kbd>F9</kbd>.
 
@@ -213,7 +213,7 @@ pip install -r requirements.txt
 pip install notebook                 # Jupyter is not pinned in requirements.txt (Colab ships it)
 
 cd notebook
-jupyter notebook IT8414_Tomato_Leaf_Classification_with_Member2.ipynb
+jupyter notebook IT8414_Tomato_Leaf_Classification_Final.ipynb
 ```
 
 Then choose <kbd>Kernel</kbd> → <kbd>Restart & Run All</kbd>. Outside Colab, the notebook uses the folder above `notebook/` as the project root and never uploads or downloads anything.
@@ -257,7 +257,8 @@ IT8414-Tomato-Leaf-Disease-Classification/
 ├── .gitignore                       # ignores *.zip except data/original/tomato_original.zip
 │
 ├── notebook/
-│   ├── IT8414_Tomato_Leaf_Classification_with_Member2.ipynb  # MASTER: 1.0 – 7.7 (+ 8.0 – 10.0 placeholders)
+│   ├── IT8414_Tomato_Leaf_Classification_Final.ipynb         # FINAL: 1.0 – 10.0, all members (submit this)
+│   ├── IT8414_Tomato_Leaf_Classification_with_Member2.ipynb  # earlier master: 1.0 – 7.7
 │   ├── IT8414_Tomato_Leaf_Classification.ipynb               # Member 1 only: 1.0 – 5.9
 │   └── IT8414_Member2_Sections_6_7.ipynb                     # Member 2 only: 6.0 – 7.7 (standalone)
 │
@@ -338,7 +339,7 @@ These switches are set inside the notebook:
 | `M2_REUSE_SAVED` | 6.2 | `False` | `True` loads the MobileNetV2 runs and the final model from `results/`. It does not check settings, so keep it `False` when you change a hyperparameter. |
 | `DOWNLOAD_MEMBER1_RESULTS` | 5.9 | `False` | `True` downloads Member 1's results as a ZIP (Colab only) |
 
-Pinned versions (`requirements.txt`): `tensorflow==2.21.0`, `keras==3.13.2`, `numpy==2.4.6`, `pandas==2.2.3`, `scikit-learn==1.6.1`, plus `matplotlib` and `pillow`.
+Pinned versions (`requirements.txt`): `tensorflow==2.21.0`, `keras==3.15.1`, `numpy==2.4.6`, `pandas==2.2.3`, `scikit-learn==1.6.1`, plus `matplotlib` and `pillow`.
 
 </details>
 
@@ -398,7 +399,12 @@ The project has **no server, REST API or database**. Its "interfaces" are files 
 </tr>
 </table>
 
-**Baseline on the test set (Member 1):** 80.00 % accuracy (95 % CI 66.67 – 93.33 %), macro F1 79.38 %, macro ROC-AUC 0.8950. Recall is 100 % for Healthy, 80 % for Early Blight and 60 % for Late Blight. The test-set comparison of both models is in section 8.0 (Member 3).
+**Baseline on the test set (Member 1):** 80.00 % accuracy (95 % CI 66.67 – 93.33 %), macro F1 79.38 %, macro ROC-AUC 0.8950. Recall is 100 % for Healthy, 80 % for Early Blight and 60 % for Late Blight. The test-set comparison of both models is in section 8.0 (Member 3):
+
+| Model (test set, 30 images) | Accuracy | Macro F1 | Late Blight recall | Diseased → Healthy errors | Macro ROC-AUC |
+|---|---|---|---|---|---|
+| Baseline CNN | 80.00 % | 79.38 % | 60 % | 3 | 0.8950 |
+| **MobileNetV2 (recommended)** | **83.33 %** | **83.13 %** | **90 %** | **1** | **0.9633** |
 
 > [!NOTE]
 > With 30 test images, one image is worth 3.3 percentage points, so small gaps between models may be noise. The full tables are in `results/NUMBERS_FOR_REPORT.txt` and `results/M2_NUMBERS_FOR_REPORT.txt`. The MobileNetV2 numbers come from a CPU run, so retraining on a GPU can move the last decimals.
