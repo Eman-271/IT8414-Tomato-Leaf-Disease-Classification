@@ -291,6 +291,9 @@ IT8414-Tomato-Leaf-Disease-Classification/
 │   ├── split_ratio_comparison.csv
 │   ├── split_ratio_check_without_test.csv
 │   ├── class_choice_evidence.json
+│   ├── comparison_test_results.csv          # test-set comparison of both models (Table 5.4)
+│   ├── comparison_test_per_class.csv        # per-class test results (Table 5.5)
+│   ├── comparison_misclassified_test_images.csv  # every misclassified test leaf (Figure 5.6)
 │   ├── NUMBERS_FOR_REPORT.txt               # every baseline number in the report
 │   ├── M2_NUMBERS_FOR_REPORT.txt            # every MobileNetV2 number in the report
 │   ├── README.md                            # which cell writes which file
