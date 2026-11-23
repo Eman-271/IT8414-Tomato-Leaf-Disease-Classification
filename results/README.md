@@ -32,6 +32,9 @@ Written by the project notebook (`notebook/IT8414_Tomato_Leaf_Classification_Fin
 | `figures/figD_2_improved_experiment_val_loss.png` | 7.3 (report Figure D.2) |
 | `figures/fig5_3_overfitting_control.png` | 7.4 (report Figure 5.3) |
 | `figures/fig5_2_improved_learning_curves.png` | 7.5 (report Figure 5.2) |
+| `comparison_test_results.csv` | 8.1 (report Table 5.4) |
+| `comparison_test_per_class.csv` | 8.2 (report Table 5.5) |
 | `figures/fig5_5_test_confusion_matrices.png` | 8.2 (report Figure 5.5) |
+| `comparison_misclassified_test_images.csv` | 9.1 (error analysis) |
 | `figures/fig5_6_misclassified_test_leaves.png` | 9.1 (report Figure 5.6) |
 | `figures/fig6_1_gradcam_test_leaves.png` | 9.3 (report Figure 6.1) |

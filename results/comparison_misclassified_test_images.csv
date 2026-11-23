@@ -1,0 +1,12 @@
+Model,Image,True class,Predicted,Confidence,Prob. of true class,test_index
+Baseline CNN,7d9f4bd8-6a4...,Late Blight,Early Blight,0.6936271,0.24124411,0
+Baseline CNN,48dd3efc-400...,Early Blight,Healthy,0.51811874,0.3300246,1
+Baseline CNN,24379205-969...,Early Blight,Healthy,0.41194487,0.3513977,5
+Baseline CNN,5ad08690-955...,Late Blight,Early Blight,0.76959914,0.22939673,12
+Baseline CNN,b6b9bd13-78e...,Late Blight,Healthy,0.87053096,0.02841974,13
+Baseline CNN,f84a91cc-ad1...,Late Blight,Early Blight,0.9099052,0.08533929,26
+MobileNetV2,48dd3efc-400...,Early Blight,Healthy,0.9018426,0.069333956,1
+MobileNetV2,dc64e0f0-9f5...,Early Blight,Late Blight,0.9830346,0.016691646,7
+MobileNetV2,1430346f-f3f...,Late Blight,Early Blight,0.6961102,0.30388987,18
+MobileNetV2,30e6be40-743...,Early Blight,Late Blight,0.57528186,0.42468435,22
+MobileNetV2,ac022a2b-764...,Healthy,Early Blight,0.67328835,0.13720635,27
