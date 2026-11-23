@@ -410,23 +410,23 @@ The project has **no server, REST API or database**. Its "interfaces" are files 
 
 <table>
 <tr>
-<td align="center" width="50%"><img src="results/figures/fig4_1_overall_workflow.png" alt="Overall workflow" width="100%"><br><sub><b>Figure 4.1</b> · Overall workflow</sub></td>
-<td align="center" width="50%"><img src="results/figures/fig3_4_pipeline.png" alt="Data pipeline" width="100%"><br><sub><b>Figure 3.4</b> · Data pipeline</sub></td>
+<td align="center" valign="top" width="50%"><img src="results/figures/fig3_4_pipeline.png" alt="Data pipeline" width="100%"><br><sub><b>Figure 3.4</b> · Data pipeline</sub></td>
+<td align="center" valign="top" width="50%"><img src="results/figures/fig3_6_split_ratio_comparison.png" alt="Split-ratio comparison" width="100%"><br><sub><b>Figure 3.6</b> · Split-ratio experiment</sub></td>
 </tr>
 <tr>
-<td align="center"><img src="results/figures/fig5_2_improved_learning_curves.png" alt="MobileNetV2 learning curves" width="100%"><br><sub><b>Figure 5.2</b> · MobileNetV2 learning curves</sub></td>
-<td align="center"><img src="results/figures/fig5_3_overfitting_control.png" alt="Overfitting-control ablation" width="100%"><br><sub><b>Figure 5.3</b> · Overfitting-control ablation</sub></td>
+<td align="center" valign="top"><img src="results/figures/fig4_1_overall_workflow.png" alt="Overall workflow" width="100%"><br><sub><b>Figure 4.1</b> · Overall workflow</sub></td>
+<td align="center" valign="top"><img src="results/figures/fig5_2_improved_learning_curves.png" alt="MobileNetV2 learning curves" width="100%"><br><sub><b>Figure 5.2</b> · MobileNetV2 learning curves</sub></td>
 </tr>
 <tr>
-<td align="center"><img src="results/figures/fig5_4_baseline_confusion_matrix.png" alt="Baseline confusion matrix" width="100%"><br><sub><b>Figure 5.4</b> · Baseline confusion matrix (test)</sub></td>
-<td align="center"><img src="results/figures/fig3_6_split_ratio_comparison.png" alt="Split-ratio comparison" width="100%"><br><sub><b>Figure 3.6</b> · Split-ratio experiment</sub></td>
+<td align="center" valign="top"><img src="results/figures/fig5_3_overfitting_control.png" alt="Overfitting-control ablation" width="100%"><br><sub><b>Figure 5.3</b> · Overfitting-control ablation</sub></td>
+<td align="center" valign="top"><img src="results/figures/fig5_4_baseline_confusion_matrix.png" alt="Baseline confusion matrix" width="100%"><br><sub><b>Figure 5.4</b> · Baseline confusion matrix (test)</sub></td>
 </tr>
 <tr>
-<td align="center"><img src="results/figures/fig5_5_test_confusion_matrices.png" alt="Test-set confusion matrices" width="100%"><br><sub><b>Figure 5.5</b> · Test-set confusion matrices (both models)</sub></td>
-<td align="center"><img src="results/figures/fig5_6_misclassified_test_leaves.png" alt="Misclassified test leaves" width="100%"><br><sub><b>Figure 5.6</b> · Misclassified test leaves</sub></td>
+<td align="center" valign="top"><img src="results/figures/fig5_5_test_confusion_matrices.png" alt="Test-set confusion matrices" width="100%"><br><sub><b>Figure 5.5</b> · Test-set confusion matrices (both models)</sub></td>
+<td align="center" valign="top"><img src="results/figures/fig5_6_misclassified_test_leaves.png" alt="Misclassified test leaves" width="100%"><br><sub><b>Figure 5.6</b> · Misclassified test leaves</sub></td>
 </tr>
 <tr>
-<td align="center" colspan="2"><img src="results/figures/fig6_1_gradcam_test_leaves.png" alt="Grad-CAM for both models" width="60%"><br><sub><b>Figure 6.1</b> · Grad-CAM: where each model looks (section 9.0)</sub></td>
+<td align="center" colspan="2"><img src="results/figures/fig6_1_gradcam_test_leaves.png" alt="Grad-CAM for both models" width="50%"><br><sub><b>Figure 6.1</b> · Grad-CAM: where each model looks (section 9.0)</sub></td>
 </tr>
 </table>
 
