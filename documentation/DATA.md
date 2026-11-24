@@ -2,7 +2,7 @@
 
 **Project:** IT8414 Deep Learning for Data Analytics — Tomato Leaf Disease Classification
 **Group:** 01 · **Prepared by:** Fatema (Member 1 – Data Pipeline & Baseline Model)
-**Last updated:** 11/11/2026
+**Last updated:** 24/11/2026
 
 This file is the dataset deliverable required by the brief (Deliverable 3): the
 download link, the licence, the folder structure and the preparation steps. The
@@ -100,7 +100,7 @@ blights, so the task is genuinely fine-grained.
 ## 5. Project folder structure
 
 ```
-IT8414_Tomato_Project/
+IT8414-Tomato-Leaf-Disease-Classification/     # in Colab: /content/IT8414_Tomato_Project/
 ├── data/
 │   ├── original/                 # untouched Kaggle class folders (tomato_original.zip)
 │   │   ├── Tomato___healthy/
@@ -114,7 +114,7 @@ IT8414_Tomato_Project/
 │       ├── train_split.csv
 │       ├── validation_split.csv
 │       ├── test_split.csv
-│       └── data_summary.json     # written by scripts/prepare_data.py
+│       └── data_summary.json     # written by notebook Cell 5.4 or scripts/prepare_data.py
 ├── documentation/DATA.md         # this file
 ├── notebook/IT8414_Tomato_Leaf_Classification_Final.ipynb
 ├── scripts/prepare_data.py       # rebuilds data/selected and the manifests

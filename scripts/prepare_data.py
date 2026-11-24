@@ -1,6 +1,6 @@
 """
 IT8414 Tomato Leaf Classification - data preparation script
-Author: Fatema (Member 1 - Data Pipeline & Baseline Model)
+Author: Fatema Alashiri
 
 Rebuilds the project dataset from the original Kaggle images without the
 notebook. It performs exactly the same steps, with the same seed, as notebook
@@ -66,9 +66,11 @@ def select_balanced_subset(original_path, selected_path, rebuild):
     if subset_complete(selected_path) and not rebuild:
         print("Balanced subset already exists - keeping it.")
         return
-    if selected_path.exists():
-        shutil.rmtree(selected_path)
-    selected_path.mkdir(parents=True)
+    # Remove only the class folders, so data/selected/README.md is kept
+    for class_name in EXPECTED_CLASSES:
+        if (selected_path / class_name).exists():
+            shutil.rmtree(selected_path / class_name)
+    selected_path.mkdir(parents=True, exist_ok=True)
 
     # One random generator used across the classes in a fixed order (same as the notebook)
     selection_rng = random.Random(SEED)

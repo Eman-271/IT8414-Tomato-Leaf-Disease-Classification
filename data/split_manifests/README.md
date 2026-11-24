@@ -7,8 +7,8 @@ The official split (80/10/10, chosen by the split-ratio experiment in notebook C
 | `train_split.csv` | 240 (80 per class) |
 | `validation_split.csv` | 30 (10 per class) |
 | `test_split.csv` | 30 (10 per class) |
-| `data_summary.json` | Counts and leakage-check results (written by `prepare_data.py`) |
+| `data_summary.json` | Counts and leakage-check results (written by notebook Cell 5.4 or `scripts/prepare_data.py`) |
 
-Columns: `filename, label, label_id, split, relative_path`. Older files with
-`image_path, label` also load. Put your existing CSV files here, and the
-notebook rewrites them in the new format on the next run.
+Columns: `filename, label, label_id, split, relative_path`. The paths are relative,
+so the files work on any computer. Do not edit or re-split them: notebook Cell 1.0
+checks their MD5 checksums.

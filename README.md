@@ -166,7 +166,7 @@ Augmentation + dropout + early stopping cut the train/validation loss gap from *
 <td valign="top">
 
 ### ♻️ Exact re-runs
-`M1_REUSE_SAVED` replays saved runs when the settings match and retrains when they change. Both final models are committed as `.keras` files.
+`M1_REUSE_SAVED` and `M2_REUSE_SAVED` replay a saved run only when its settings **and its code** are unchanged, and train it again otherwise. Both final models are committed as `.keras` files.
 
 </td>
 </tr>
@@ -187,7 +187,7 @@ Cell 5.8 predicts the class of a new leaf photo. Everything also runs **offline*
 </table>
 
 > [!TIP]
-> To change one hyperparameter during a live demo, edit its cell and re-run from there. With `M1_REUSE_SAVED = True`, only the changed baseline run is retrained, and every other run is replayed from `results/baseline_runs.json`.
+> To change one hyperparameter during a live demo, edit its cell and re-run from there. With `M1_REUSE_SAVED = True`, only the changed experiment is trained again; every other run is replayed from `results/baseline_runs.json`. A change to shared code (the model, the training helper or the data pipeline) trains every run that uses it again, so the old saved results are never shown for new code.
 
 <p align="right"><a href="#readme-top">↑ back to top</a></p>
 
@@ -335,9 +335,10 @@ These switches are set inside the notebook:
 
 | Flag | Cell | Default | Effect |
 |---|---|---|---|
-| `M1_REUSE_SAVED` | 5.2 | `True` | Replays a baseline run from `results/baseline_runs.json` only if its settings and images match exactly. A changed setting is trained live. `False` retrains everything. |
-| `M2_REUSE_SAVED` | 6.2 | `True` | Re-loads a MobileNetV2 run from `results/improved_runs.json` only if its settings are unchanged; a changed setting is trained again. `False` retrains everything. |
+| `M1_REUSE_SAVED` | 5.2 | `True` | Replays a baseline run from `results/baseline_runs.json` only if its settings, images **and code** are unchanged (the code is checked with a fingerprint, `code_id()`). Anything changed is trained live. `False` retrains everything. |
+| `M2_REUSE_SAVED` | 6.2 | `True` | Re-loads a MobileNetV2 run from `results/improved_runs.json` only if its settings, starting weights **and code** are unchanged. Anything changed is trained again. `False` retrains everything. |
 | `DOWNLOAD_MEMBER1_RESULTS` | 5.9 | `False` | `True` downloads the baseline results as a ZIP (Colab only) |
+| `DOWNLOAD_MEMBER2_RESULTS` | 7.7 | `False` | `True` downloads the MobileNetV2 results as a ZIP (Colab only) |
 
 Pinned versions (`requirements.txt`): `tensorflow==2.21.0`, `keras==3.15.1`, `numpy==2.4.6`, `pandas==2.2.3`, `scikit-learn==1.6.1`, plus `matplotlib` and `pillow`.
 
